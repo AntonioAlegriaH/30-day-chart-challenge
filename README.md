@@ -1,6 +1,6 @@
 # 30 day chart challenge
 
-### | [2021]() | [2024]() |
+### | [2021](https://github.com/AntonioAlegriaH/30-day-chart-challenge/tree/main?tab=readme-ov-file#2021) | [2024](https://github.com/AntonioAlegriaH/30-day-chart-challenge/tree/main?tab=readme-ov-file#2021) |
 
 > The #30DayChartChallenge is a community-driven challenge that happens each year during April. Every day, there is a certain prompt, grouped into five categories: comparisons, distributions, relationships, time series, and uncertainties. Anyone is welcome to contribute, no matter which data source or tool is used to create the visualizations. The first edition was run in 2021 with 1,960 contributions from all over the world. The challenge is inspired by the #30DayMapChallenge which was initiated by Topi Tjukanov in 2019.
 
