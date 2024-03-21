@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stylish Carousel</title>
+<style>
+  /* Carousel container styles */
+  .carousel-container {
+    width: 100%;
+    max-width: 800px; /* Adjust maximum width as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position relative added */
+  }
+  
+  /* Slide styles */
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    transition: opacity 0.5s ease;
+    border-radius: 10px;
+  }
+  
+  /* Show the first slide by default */
+  .carousel-slide:first-child {
+    display: block;
+  }
+  
+  /* Navigation buttons */
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-control:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="carousel-container">
+  <img class="carousel-slide" src="images/plot_part_land_use.png" alt="Image 1">
+  <img class="carousel-slide" src="images/twilight_plot.png" alt="Image 2">
+  <img class="carousel-slide" src="images/hurrem-carousel.png" alt="Image 3">
+  <!-- Add more images as needed -->
+  <a class="carousel-control prev" onclick="prevSlide()">&#10094;</a>
+  <a class="carousel-control next" onclick="nextSlide()">&#10095;</a>
+</div>
+
+<script>
+  // JavaScript to handle the carousel functionality
+  const slides = document.querySelectorAll('.carousel-slide');
+  let currentSlide = 0;
+
+  function showSlide(n) {
+    slides[currentSlide].style.display = 'none';
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].style.display = 'block';
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  // Automatically advance slides every 5 seconds
+  setInterval(nextSlide, 5000);
+</script>
+
+</body>
+</html>
+
